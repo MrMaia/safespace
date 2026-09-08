@@ -1,0 +1,8 @@
+# Ignore .env file
+.env
+
+# Node.js
+node_modules/
+
+# PHP dependencies (instale com `composer install`)
+vendor/
