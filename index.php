@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 session_start();
                                 $_SESSION["user_id"] = $id;
                                 $_SESSION["user_name"] = $usuario;
-                                header("location: dashboard.php");
+                                header("location: pages/dashboard.php");
                             } else {
                                 $login_err = "Senha inválida.";
                             }

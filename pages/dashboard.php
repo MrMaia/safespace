@@ -3,14 +3,14 @@ session_start();
 
 // Verifica se o usuário está logado, caso contrário redireciona para a página de login
 if (!isset($_SESSION['user_id'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit();
 }
 
 // Obtém o nome do usuário da sessão
 $user_name = htmlspecialchars($_SESSION['user_name']);
 
-require 'config/db.php';
+require '../config/db.php';
 
 $pdo = getDbConnection();
 $casosPorMes = array_fill(1, 12, 0); // Inicializa um array com 12 zeros, um para cada mês
@@ -55,10 +55,10 @@ if ($pdo) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Space - Dashboard</title>
-    <link rel="shortcut icon" href="./assets/compiled/svg/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/compiled/css/app.css">
-    <link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
-    <link rel="stylesheet" href="./assets/compiled/css/iconly.css">
+    <link rel="shortcut icon" href="../assets/compiled/svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/compiled/css/app.css">
+    <link rel="stylesheet" href="../assets/compiled/css/app-dark.css">
+    <link rel="stylesheet" href="../assets/compiled/css/iconly.css">
     <script>
         // Dados fornecidos pelo PHP
         var casosPorMes = <?php echo json_encode(array_values($casosPorMes)); ?>;
@@ -81,14 +81,14 @@ if ($pdo) {
         });
     </script>
 
-    <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/static/js/pages/dashboard.js"></script>
+    <script src="../assets/extensions/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/static/js/pages/dashboard.js"></script>
 </head>
 
 <body>
-    <script src="assets/static/js/initTheme.js"></script>
+    <script src="../assets/static/js/initTheme.js"></script>
     <div id="app">
-        <?php include 'telas/sidebar.php'; ?>
+        <?php include '../includes/sidebar.php'; ?>
         <div id="main">
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
@@ -174,7 +174,7 @@ if ($pdo) {
                                 <div class="d-flex flex-lg-column align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-xl">
-                                            <img src="./assets/compiled/jpg/1.jpg" alt="Face 1">
+                                            <img src="../assets/compiled/jpg/1.jpg" alt="Face 1">
                                         </div>
                                         <div class="ms-3 name">
                                             <h5 class="font-bold"><?php echo $user_name; ?></h5>
@@ -182,7 +182,7 @@ if ($pdo) {
                                         </div>
                                     </div>
                                     <div class="d-flex pt-4 justify-content-center">
-                                        <a href="logout.php" class="btn btn-danger">Logout</a>
+                                        <a href="../actions/logout.php" class="btn btn-danger">Logout</a>
                                     </div>
                                 </div>
                             </div>
@@ -219,14 +219,14 @@ if ($pdo) {
                 </section>
             </div>
 
-            <?php include 'telas/footer.php'; ?>
+            <?php include '../includes/footer.php'; ?>
         </div>
     </div>
-    <script src="assets/static/js/components/dark.js"></script>
-    <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/compiled/js/app.js"></script>
-    <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/static/js/pages/dashboard.js"></script>
+    <script src="../assets/static/js/components/dark.js"></script>
+    <script src="../assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/compiled/js/app.js"></script>
+    <script src="../assets/extensions/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/static/js/pages/dashboard.js"></script>
 </body>
 
 </html>

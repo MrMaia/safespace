@@ -1,5 +1,5 @@
 <?php
-require 'config/db.php';
+require '../config/db.php';
 
 $pdo = getDbConnection();
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Processar anexos
         if (!empty($_FILES['anexos']['name'][0])) {
-            $uploads_dir = 'uploads/anexos';
+            $uploads_dir = __DIR__ . '/../uploads/anexos';
             foreach ($_FILES['anexos']['tmp_name'] as $key => $tmp_name) {
                 $filename = basename($_FILES['anexos']['name'][$key]);
                 $filepath = "$uploads_dir/$filename";
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mail($email_acusado, $subject_acusado, $message_acusado, $headers);
         }
 
-        header('Location: cd_clientes.php');
+        header('Location: ../pages/cd_clientes.php');
         exit();
     } catch (PDOException $e) {
         echo 'Erro ao cadastrar denúncia: ' . $e->getMessage();

@@ -53,21 +53,30 @@ que cadastrou, com anexos, nível de prioridade e status de andamento.
 
 ```
 safespace/
-├── config/                 # Conexão com o banco (lê credenciais do .env)
-│   ├── db.php               # PDO — usado pela maioria das páginas
-│   └── conexao.php          # mysqli — usado pelas rotinas mais antigas
-├── telas/                  # Partials compartilhados (sidebar, footer)
-├── assets/                  # CSS, JS, fontes e imagens do template
-├── index.php                 # Login
-├── dashboard.php              # Painel com estatísticas
-├── cd_clientes.php / cd_cursos.php   # Listagem de denúncias / cursos
-├── form_clientes.php / form_cursos.php  # Formulários de cadastro
-├── editar_denuncia.php        # Edição de uma denúncia
-├── ver_detalhes.php           # Detalhes de uma denúncia
-├── editar_email_template.php  # Edição dos modelos de e-mail
-├── processa_*.php / processar_*.php / atualiza_*.php  # Handlers de formulário
-├── apagar_*.php / cancelar_denuncia.php / concluir_denuncia.php  # Ações de status
-├── .env.example               # Modelo das variáveis de ambiente
+├── config/                    # Conexão com o banco (lê credenciais do .env)
+│   ├── db.php                   # PDO — usado pela maioria das páginas
+│   └── conexao.php              # mysqli — usado pelas rotinas mais antigas
+├── includes/                  # Partials compartilhados (sidebar, footer)
+├── pages/                     # Telas (login à parte, no index.php)
+│   ├── dashboard.php            # Painel com estatísticas
+│   ├── cd_clientes.php            # Listagem de denúncias
+│   ├── cd_cursos.php              # Listagem de cursos
+│   ├── form_clientes.php          # Formulário de nova denúncia
+│   ├── form_cursos.php            # Formulário de novo curso
+│   ├── editar_denuncia.php        # Edição de uma denúncia
+│   ├── ver_detalhes.php           # Detalhes de uma denúncia
+│   ├── editar_email_template.php  # Edição dos modelos de e-mail
+│   ├── cadastro_instituicao.php   # Cadastro manual de instituição
+│   └── cadastro_usuario.php       # Cadastro manual de usuário
+├── actions/                   # Handlers de formulário e mudanças de status
+│   ├── processa_denuncia.php / processar_denuncia.php / atualiza_denuncia.php
+│   ├── processar_curso.php
+│   ├── apagar_denuncia.php / apagar_curso.php
+│   ├── cancelar_denuncia.php / concluir_denuncia.php
+│   └── logout.php
+├── assets/                    # CSS, JS, fontes e imagens do template
+├── index.php                    # Login (ponto de entrada)
+├── .env.example                # Modelo das variáveis de ambiente
 └── composer.json
 ```
 

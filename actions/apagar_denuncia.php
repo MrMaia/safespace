@@ -1,12 +1,12 @@
 <?php
-require 'config/db.php';
+require '../config/db.php';
 $id = $_GET['id'];
 $pdo = getDbConnection();
 if ($pdo) {
-    $sql = "DELETE FROM cursos WHERE id = :id";
+    $sql = "DELETE FROM denuncias WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id' => $id]);
 }
-header('Location: cd_cursos.php');
+header('Location: ../pages/cd_clientes.php');
 exit();
 ?>

@@ -4,7 +4,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="dashboard.php">
-                        <img src="./assets/compiled/png/logo.png" alt="Logo" srcset="" style="width: 120px; height: auto;">
+                        <img src="../assets/compiled/png/logo.png" alt="Logo" srcset="" style="width: 120px; height: auto;">
                     </a>
                 </div>
                 <div class="theme-toggle d-flex gap-2 align-items-center mt-2">

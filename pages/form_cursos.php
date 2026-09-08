@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Curso - Safe Space</title>
-    <link rel="stylesheet" href="assets/extensions/choices.js/public/assets/styles/choices.css">
-    <link rel="shortcut icon" href="./assets/compiled/svg/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/extensions/filepond/filepond.css">
-    <link rel="stylesheet" href="assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css">
-    <link rel="stylesheet" href="assets/extensions/toastify-js/src/toastify.css">
-    <link rel="stylesheet" href="./assets/compiled/css/app.css">
-    <link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
+    <link rel="stylesheet" href="../assets/extensions/choices.js/public/assets/styles/choices.css">
+    <link rel="shortcut icon" href="../assets/compiled/svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/extensions/filepond/filepond.css">
+    <link rel="stylesheet" href="../assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css">
+    <link rel="stylesheet" href="../assets/extensions/toastify-js/src/toastify.css">
+    <link rel="stylesheet" href="../assets/compiled/css/app.css">
+    <link rel="stylesheet" href="../assets/compiled/css/app-dark.css">
 </head>
 
 <body>
-    <script src="assets/static/js/initTheme.js"></script>
+    <script src="../assets/static/js/initTheme.js"></script>
     <div id="app">
-        <?php include 'telas/sidebar.php'; ?>
+        <?php include '../includes/sidebar.php'; ?>
         <div id="main">
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form" method="POST" action="processar_curso.php">
+                                        <form class="form" method="POST" action="../actions/processar_curso.php">
                                             <div class="row">
                                                 <div class="col-md-12 col-12">
                                                     <div class="form-group">
@@ -66,13 +66,13 @@
                 <!-- Basic multiple Column Form section end -->
             </div>
 
-            <?php include 'telas/footer.php'; ?>
+            <?php include '../includes/footer.php'; ?>
         </div>
     </div>
-    <script src="assets/static/js/components/dark.js"></script>
-    <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/compiled/js/app.js"></script>
-    <script src="assets/extensions/choices.js/public/assets/scripts/choices.js"></script>
-    <script src="assets/static/js/pages/form-element-select.js"></script>
+    <script src="../assets/static/js/components/dark.js"></script>
+    <script src="../assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/compiled/js/app.js"></script>
+    <script src="../assets/extensions/choices.js/public/assets/scripts/choices.js"></script>
+    <script src="../assets/static/js/pages/form-element-select.js"></script>
 </body>
 </html>

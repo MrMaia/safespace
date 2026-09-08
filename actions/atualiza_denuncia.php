@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-include 'config/conexao.php';
+include '../config/conexao.php';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Redireciona para dashboard.php
-        header("Location: dashboard.php");
+        header("Location: ../pages/dashboard.php");
         exit();
     } else {
         echo "Erro: " . $stmt->error;

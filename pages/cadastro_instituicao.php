@@ -29,7 +29,7 @@
             </form>
             <?php
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                require 'config/db.php';
+                require '../config/db.php';
 
                 $email = $_POST['email'];
                 $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);

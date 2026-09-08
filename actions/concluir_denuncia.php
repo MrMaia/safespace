@@ -1,5 +1,5 @@
 <?php
-require 'config/db.php';
+require '../config/db.php';
 
 $id = $_GET['id'];
 $pdo = getDbConnection();
@@ -14,6 +14,6 @@ if ($pdo) {
     }
 }
 
-header('Location: ver_detalhes.php?id=' . $id);
+header('Location: ../pages/ver_detalhes.php?id=' . $id);
 exit();
 ?>

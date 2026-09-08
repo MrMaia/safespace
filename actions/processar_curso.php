@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome_curso = $_POST['nome_curso'];
@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':nome_curso', $nome_curso);
 
         if ($stmt->execute()) {
-            header("Location: form_cursos.php?status=success");
+            header("Location: ../pages/form_cursos.php?status=success");
             exit();
         } else {
-            header("Location: form_cursos.php?status=error");
+            header("Location: ../pages/form_cursos.php?status=error");
             exit();
         }
     } else {
-        header("Location: form_cursos.php?status=error");
+        header("Location: ../pages/form_cursos.php?status=error");
         exit();
     }
 }

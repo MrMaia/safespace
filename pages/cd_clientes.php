@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Space - Dashboard</title>
-    <link rel="shortcut icon" href="./assets/compiled/svg/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="./assets/compiled/css/table-datatable-jquery.css">
-    <link rel="stylesheet" href="./assets/compiled/css/app.css">
-    <link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
+    <link rel="shortcut icon" href="../assets/compiled/svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="../assets/compiled/css/table-datatable-jquery.css">
+    <link rel="stylesheet" href="../assets/compiled/css/app.css">
+    <link rel="stylesheet" href="../assets/compiled/css/app-dark.css">
 </head>
 
 <body>
-    <script src="assets/static/js/initTheme.js"></script>
+    <script src="../assets/static/js/initTheme.js"></script>
     <div id="app">
-        <?php include 'telas/sidebar.php'; ?>
+        <?php include '../includes/sidebar.php'; ?>
         <div id="main">
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
@@ -57,7 +57,7 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                        require 'config/db.php';
+                                        require '../config/db.php';
                                         $pdo = getDbConnection();
                                         if ($pdo) {
                                             $sql = "SELECT id, nome_vitima, email_vitima, nome_acusado, email_acusado, status, prioridade, gravidade FROM denuncias";
@@ -108,16 +108,16 @@
 
             </div>
 
-            <?php include 'telas/footer.php'; ?>
+            <?php include '../includes/footer.php'; ?>
         </div>
     </div>
-    <script src="assets/static/js/components/dark.js"></script>
-    <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/compiled/js/app.js"></script>
-    <script src="assets/extensions/jquery/jquery.min.js"></script>
-    <script src="assets/extensions/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="assets/static/js/pages/datatables.js"></script>
+    <script src="../assets/static/js/components/dark.js"></script>
+    <script src="../assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/compiled/js/app.js"></script>
+    <script src="../assets/extensions/jquery/jquery.min.js"></script>
+    <script src="../assets/extensions/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../assets/static/js/pages/datatables.js"></script>
 </body>
 
 </html>

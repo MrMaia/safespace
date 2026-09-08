@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-include 'config/conexao.php';
+include '../config/conexao.php';
 
 // Processa o formulário quando é enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
